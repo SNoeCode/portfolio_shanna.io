@@ -1,0 +1,28 @@
+{
+    "skills": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React.js",
+        "Python",
+        "Next.js",
+        "Node.js",
+        "Express.js",
+        "TailwindCSS",
+        "Material UI",
+        "UI/UX Principles",
+        "Accessibility Standards",
+        "Juypter Notebook",
+        "MongoDB",
+        "CRUD Operations",
+        "RESTful APIs",
+        "WebSockets",
+        "Authentication (JWT & OAuth)",
+        "GitHub",
+        "CI/CD Pipelines",
+        "Docker & Containerization",
+        "Data Structures & Algorithms",
+        "Cybersecurity Fundamentals",
+        "Linux & Bash Scripting"
+       ]
+}
