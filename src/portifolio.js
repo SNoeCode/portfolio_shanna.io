@@ -8,7 +8,7 @@ const about = {
   role: 'Web Developer',
   description:
     'Passionate about front-end development, mastering TailwindCSS, React, and Vite. Continuously learning efficient coding practices, theme management, and collaborative workflows using Git Flow.',
-  resume: 'https://your-resume-link.com', // Replace with your actual resume link
+  resume: 'https://drive.google.com/file/d/1GPiNblHFGkYLew-byZ5EHumqfRsNm16R/view?usp=sharing', // Replace with your actual resume link
   social: {
     linkedin: 'https://www.linkedin.com/in/shanna-noe/', // Replace with your actual LinkedIn profile
     github: 'https://github.com/SNoeCode',

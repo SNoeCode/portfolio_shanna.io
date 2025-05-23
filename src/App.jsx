@@ -12,13 +12,14 @@ import Navbar from './components/Navbar';
 // import Top from './components/Top'
 import { ProjectsProvider } from './context/ProjectsContext';
 import MatrixLoader from './components/MatrixLoader';
+import { ThemeProvider } from './context/ThemeContext';
 // import Header from './components/Header'
 function App() {
   return (
-   
+    <ThemeProvider>
     <ProjectsProvider>
       <MatrixLoader/>
-      <BrowserRouter>
+      <BrowserRouter basename="/portfolio_shanna.io/">
         <Navbar/>
         <div className="min-h-screen bg-slate text-light transition-colors duration-300">
           {/* <Top/> */}
@@ -33,6 +34,7 @@ function App() {
       </BrowserRouter>
     </ProjectsProvider>
 
+</ThemeProvider>
   );
 }
 

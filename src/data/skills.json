@@ -11,18 +11,18 @@
         "TailwindCSS",
         "Material UI",
         "UI/UX Principles",
-        "Accessibility Standards",
-        "Juypter Notebook",
+        "Docker",
         "MongoDB",
+        "GitHub",
+        "Juypter Notebook",
         "CRUD Operations",
         "RESTful APIs",
         "WebSockets",
-        "Authentication (JWT & OAuth)",
-        "GitHub",
         "CI/CD Pipelines",
-        "Docker & Containerization",
+        "Accessibility Standards",
         "Data Structures & Algorithms",
         "Cybersecurity Fundamentals",
+        "Authentication(JWT & OAuth)",
         "Linux & Bash Scripting"
        ]
 }

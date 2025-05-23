@@ -1,144 +1,4 @@
-// import { useState, useEffect, useRef } from "react";
-// import axios from 'axios'
-// import skillsData from "../data/skills.json";
 
-// const Skills = () => {
-//   const [skills, setSkills] = useState([]); // Store fetched skills
-//   const [visible, setVisible] = useState(false);
-//   const ref = useRef(null);
-
-//   useEffect(() => {
-
-//     useEffect(() => {
-//       console.log(skillsData)
-//     setSkills(skillsData); // Load data from JSON file
-//   }, []);
-
-
-
-//     // Intersection Observer for scroll-triggered animation
-//     const observer = new IntersectionObserver(
-//       ([entry]) => {
-//         if (entry.isIntersecting) setVisible(true);
-//       },
-//       { threshold: 0.5 }
-//     );
-
-//     if (ref.current) observer.observe(ref.current);
-//     return () => observer.disconnect();
-//   }, []);
-
-//   return (
-//     <div id="about-me" ref={ref} className="min-h-screen flex items-center justify-center text-white">
-//        <div className="grid grid-cols-2 gap-4">
-//          {skills.map((skill, index) => (
-//           <div
-//             key={skill}
-//             className={`text-2xl font-bold opacity-0 transform transition-all duration-1000 ${
-//               visible ? "opacity-100 translate-y-0" : "translate-y-10"
-//             }`}
-//             style={{ transitionDelay: `${index * 200}ms` }}
-//           >
-//             {skill}
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Skills;
-
-// import { useState, useEffect } from "react";
-// import skillsData from "../data/skills.json"; // Import directly
-
-// const Skills = () => {
-//   const [skills, setSkills] = useState([]);
-
-//   useEffect(() => {
-//     setSkills(skillsData); // Load data from JSON file
-//   }, []);
-
-//   return (
-//     <div id="about-me" className="min-h-screen flex items-center justify-center text-white">
-//       <div className="grid grid-cols-2 gap-4">
-//         {skills.map((skill, index) => (
-//           <div
-//             key={skill}
-//             className="text-2xl font-bold opacity-100 transition-all duration-1000"
-//             style={{ transitionDelay: `${index * 200}ms` }}
-//           >
-//             {skill}
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Skills;
-
-// import { useState, useEffect,useRef } from "react";
-// import skillsData from "../data/skills.json"; // Import directly
-
-// const Skills = () => {
-//   const [skills, setSkills] = useState([]);
-//    const [visible, setVisible] = useState(false);
-//    const ref = useRef(null);
-//  useEffect(() => {
-//   setSkills(skillsData.skills ? skillsData.skills : []); // Ensuring skills are set properly
-
-//   // Intersection Observer for scroll-triggered animation
-//     const observer = new IntersectionObserver(
-//       ([entry]) => {
-//         if (entry.isIntersecting) setVisible(true);
-//       },
-//       { threshold: 0.5 }
-//     );
-
-//     if (ref.current) observer.observe(ref.current);
-//     return () => observer.disconnect();
-//   }, []);
-
-// // useEffect(() => {
-// //   const observer = new IntersectionObserver(
-// //     ([entry]) => {
-// //       setVisible(entry.isIntersecting); // Resets when scrolling off
-// //     },
-// //     { threshold: 0.1 } // Activates when even 10% is visible
-// //   );
-
-// //   if (ref.current) observer.observe(ref.current);
-// //   return () => observer.disconnect();
-// // }, []);
-
-//   return (
-//     <>
-//     <h1>My Skills</h1>
-//    <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-//   {skills.map((skill, index) => (
-//     <div
-//       key={skill}
-//       className={`text-sm font-semibold p-2 rounded-lg shadow-md transition-all duration-1000 ${
-//         visible ? "opacity-100 translate-y-0 scale-105" : "opacity-0 translate-y-10 scale-90"
-//       } ${
-//         index % 4 === 0 ? "bg-red-600" :
-//         index % 4 === 1 ? "bg-blue-600" :
-//         index % 4 === 2 ? "bg-green-600" :
-//         "bg-yellow-600"
-//       }`}
-//       style={{ transitionDelay: `${index * 100}ms` }}
-//     >
-//       {skill}
-//     </div>
-//   ))}
-// </div>
-
-//         </>
-//   );
-// };
-
-// export default Skills;
 
 import { useState, useEffect, useRef } from "react";
 import skillsData from "../data/skills.json"; // Import JSON properly
@@ -147,48 +7,105 @@ const Skills = () => {
   const [skills, setSkills] = useState([]);
   const [visible, setVisible] = useState(false);
   const ref = useRef(null);
+useEffect(() => {
+  // Clear skills immediately on page load
+  setSkills([]);
 
-  useEffect(() => {
-    // Ensure JSON is properly set to state
+  // Repopulate skills after 100ms delay
+  setTimeout(() => {
     setSkills(skillsData.skills ? skillsData.skills : []);
+  }, 100);
 
-    // Intersection Observer to trigger animations
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setVisible(entry.isIntersecting);
-        if (!entry.isIntersecting) {
-          setSkills([]); // Reset when scrolling off
-          setTimeout(() => setSkills(skillsData.skills), 200); // Repopulate on scroll back in
-        }
-      },
-      { threshold: 0.1 }
-    );
+  // Intersection Observer to trigger animations
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        setSkills([]);
+        setTimeout(() => setSkills(skillsData.skills), 100);
+        setVisible(true);
+      } else {
+        setVisible(false);
+      }
+    },
+    { threshold: 0.2 } // Adjust visibility trigger sensitivity
+  );
 
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, []);
+  if (ref.current) observer.observe(ref.current);
+  return () => observer.disconnect();
+}, []); // <- Empty dependency array ensures it runs on mount
+  // useEffect(() => {
+  //   // Ensure JSON is properly set to state
+  //   setSkills(skillsData.skills ? skillsData.skills : []);
 
-  return (
-    <div id="skills" ref={ref} className="min-h-screen flex items-center justify-center text-white p-8">
-      <h1 className="text-3xl font-bold mb-6">My Skills</h1>
+  //   // Intersection Observer to trigger animations
+  //    const observer = new IntersectionObserver(
+  //   ([entry]) => {
+  //     if (entry.isIntersecting) {
+  //       // Force re-render by resetting skills, then restoring them
+  //       setSkills([]);
+  //       setTimeout(() => setSkills(skillsData.skills), 100);
+  //       setVisible(true);
+  //     } else {
+  //       setVisible(false);
+  //     }
+  //   },
+  //   { threshold: 0.2 } // Adjust visibility trigger sensitivity
+  // );
 
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-        {skills.map((skill, index) => (
-          <div
-            key={skill}
-            className={`text-sm font-Trickster p-3 rounded-lg shadow-md transition-all duration-1000 ${visible ? "opacity-100 translate-y-0 scale-105" : "opacity-0 translate-y-10 scale-90"
-              } ${index % 4 === 0 ? "text-blue-300" :
-                index % 4 === 3 ? "text-pink-300" :
-                index % 4 === 2 ? "text-yellow-200" :
-                "text-purple-300"
-              }`}
-            style={{ transitionDelay: `${index * 75}ms` }}
-          >
-            {skill}
-          </div>
-        ))}
-      </div>
+
+
+  //   if (ref.current) observer.observe(ref.current);
+  //   return () => observer.disconnect();
+  // }, []);
+
+  return ( 
+    <>
+  <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-teal-300 to-orange-800 p-8 relative overflow-hidden">
+  <h1 
+    style={{ fontFamily: "Oregano, cursive", fontSize: "46px" }} 
+    className="text-4xl font-bold mb-20 p-12 text-center text-gradient-to-b from-teal-500 to-orange-500 rounded-lg shadow-lg"
+    // className="text-4xl font-bold mb-20 p-12 text-center bg-gradient-to-r from-purple-400 via-indigo-600 to-blue-500 rounded-lg shadow-lg text-white"
+
+
+  >
+    My Skills
+  </h1>
+  
+  {/* Skills Grid Wrapped in a Relative Container */}
+  <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-10 relative w-full max-w-5xl grid-auto-rows-min">
+  {/* <div className={`grid ${skills.length % 4 === 0 ? "grid-cols-4" : "grid-cols-3"} gap-6 mt-10 relative w-full max-w-5xl overflow-hidden`}> */}
+  {/* <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-10 relative w-full max-w-5xl overflow-hidden justify-center"> */}
+    {skills.map((skill, index) => (
+      <div
+        key={index}
+         className={`skill-item text-lg p-4 transition-all duration-1000 ease-out gap-10 ${
+        visible ? "opacity-100 translate-y-0 scale-105" : "opacity-100 translate-y-10 scale-90"
+      } ${
+        index % 5 === 0 ? "text-teal-900" :
+
+        index % 4 === 3 ? "text-teal-900" :
+        index % 3 === 2 ? "text-pink-900" :
+        index % 2 === 1 ? "text-sky-900" :
+        "text-violet-900"
+      }`}
+      style={{
+        animationDelay: `${index * 300}ms`,
+        fontFamily: "Oregano, cursive",
+        fontSize: "26px"
+      }}
+    >
+      {skill}
     </div>
+    ))}
+  </div>
+</div>
+
+</>
+
+
+      
+
+
   );
 };
 

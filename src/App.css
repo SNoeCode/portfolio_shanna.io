@@ -1,10 +1,43 @@
-.comforter-regular {
-  font-family: "Comforter", cursive;
-  font-weight: 400;
-  font-style: normal;
+.font-comforter {
+  @apply text-6xl;
+  font-family: "Comforter", cursive !important;
 }
-.vibur-regular {
-  font-family: "Vibur", cursive;
-  font-weight: 400;
-  font-style: normal;
+
+.font-vibur {
+  @apply text-4xl;
+  font-family: "Vibur", cursive !important;
 }
+.font-trickster {
+  @apply text-4xl;
+  font-family: "Trickster", cursive !important;
+}
+/* .spiral-gradient {
+   @apply
+  background: conic-gradient(from 0deg, teal,  rgb(239, 17, 20),teal, rgb(255, 38, 0));
+} */
+
+/* .spiral-gradient {
+  background-image: conic-gradient(from 0deg, rgb(28, 149, 149), rgb(239, 17, 20), rgb(4, 95, 95), rgb(255, 38, 0));
+}
+
+@keyframes spiral-in {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2) rotate(180deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(360deg) translateY(0) translateX(0);
+  }
+}
+
+.skill-item {
+  animation: spiral-in 1.5s ease-out forwards;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+} */
