@@ -10,7 +10,7 @@ import {
   FaEnvelope,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { header, about } from "../portifolio";
+import { header, about } from "../data/portifolio";
 
 const Navbar = () => {
   const { themeName, toggleTheme } = useContext(ThemeContext);

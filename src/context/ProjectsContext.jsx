@@ -40,7 +40,7 @@
 // export const useProjects = () => useContext(ProjectsContext);
 
 import React, { createContext, useContext, useState } from "react";
-import { projects } from "../portifolio.js"; // Import your defined projects data
+import { projects } from "../data/portifolio.js"; // Import your defined projects data
 
 const ProjectsContext = createContext();
 
