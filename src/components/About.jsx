@@ -49,13 +49,15 @@ const About = () => {
           {/* Education */}
           <div className="max-w-md bg-gray-700 p-6 rounded-lg shadow-lg">
             <h3 className="text-xl font-semibold mb-2">Education</h3>
-            <p>Columbia University - Spring 2025 Cohort</p>
+            <p>Persevere Tech Alliance from 2023-2025</p>
+            <p></p>
+            <p>Columbia University</p>
           </div>
 
           {/* Experience */}
           <div className="max-w-md bg-gray-700 p-6 rounded-lg shadow-lg">
             <h3 className="text-xl font-semibold mb-2">Experience</h3>
-            <p>Experienced in MERN stack development, GitHub workflows, and AI-driven back-end solutions.</p>
+            <p>Banyan Labs current</p>
           </div>
 
           {/* Skills */}

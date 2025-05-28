@@ -72,7 +72,7 @@ useEffect(() => {
   </h1>
   
   {/* Skills Grid Wrapped in a Relative Container */}
-  <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-10 relative w-full max-w-5xl grid-auto-rows-min">
+  <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-10 relative w-full max-w-5xl grid-auto-rows-min overflow-hidden">
   {/* <div className={`grid ${skills.length % 4 === 0 ? "grid-cols-4" : "grid-cols-3"} gap-6 mt-10 relative w-full max-w-5xl overflow-hidden`}> */}
   {/* <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-10 relative w-full max-w-5xl overflow-hidden justify-center"> */}
     {skills.map((skill, index) => (
