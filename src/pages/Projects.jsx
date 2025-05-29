@@ -1,3 +1,4 @@
+
 import React from "react";
 import { useProjects } from "../context/ProjectsContext";
 
@@ -8,12 +9,10 @@ const Projects = () => {
     <>
       <section
         id="projects"
-        className="min-h-screen p-100 bg-gray-900 text-white flex flex-col items-center"
+        className="min-h-screen p-20 bg-gray-900 text-white flex flex-col items-center justify-center"
       >
+        <h2 className="text-8xl font-extrabold text-teal-400 mb-16">Projects</h2>
         <div className="max-w-6xl mx-auto text-center">
-          {/* <h2 className="text-7xl font-bold text-teal-400 mb-50">Projects</h2>
-           */}
-          <h2 className="text-7xl font-bold text-teal-400 mb-216">Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 place-items-center">
             {projects.map((project, index) => (
               <div

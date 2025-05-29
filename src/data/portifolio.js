@@ -18,21 +18,13 @@ const about = {
 const projects = [
   {
     name: 'Shannas Store',
-    description: 'Built dynamic store with functioning shopping cart, using CRUD, and authunications and authorization, and products list using a restful API.',
+    description: 'Built dynamic store using MERN Stack,  with functioning shopping cart, using CRUD, and authunications and authorization, and products list using a restful API.',
     stack: ['Mongo', 'React', 'Express','Node'],
     sourceCode: "https://github.com/SNoeCode/shannaStore",
-    livePreview: 'https://your-live-preview.com', 
+    // livePreview: 'https://your-live-preview.com', 
      image: "./images/project2.png"
    
   },
-//   {
-//     name: 'Portfolio Website',
-//     description: 'Created a responsive portfolio site using React and TailwindCSS.',
-//     stack: ['React', 'TailwindCSS', 'Vite'],
-//     sourceCode: 'https://github.com/ShannaNoe/portfolio',
-//     livePreview: 'https://your-portfolio-link.com',
-//      image: "./images/project2.png" 
-//   },
 {
     name: "Horoscope App",
     description: "An interactive astrology app built with Vite and deployed on Vercel.",
@@ -43,7 +35,15 @@ const projects = [
 
   },
 
+{
+    name: "Todo App",
+    description: "An interactive astrology app built with Vite and deployed on Vercel.",
+    stack: ["React", "Express", "Mongo", "Node"],
+    sourceCode: "https://github.com/SNoeCode/todo-app", 
+    // livePreview: "https://horoscope-63bbm0hd4-snoecodes-projects.vercel.app/",
+     image: "./images/project3.png" 
 
+  },
 ]
 
 const skills = [

@@ -4,19 +4,19 @@
 
 import React from 'react';
 import { BrowserRouter, Router,  Routes, Route } from 'react-router-dom';
-import Home from './components/Home';
-import About from './components/About';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
+import Home from './pages/Home';
+import About from './pages/About';
+import Projects from './pages/Projects';
+import Contact from './pages/Contact';
 import Navbar from './components/Navbar';
-// import Top from './components/Top'
 import { ProjectsProvider } from './context/ProjectsContext';
 import MatrixLoader from './components/MatrixLoader';
-import { ThemeProvider } from './context/ThemeContext';
-// import Header from './components/Header'
+import ProjectSection from './components/ProjectSection';
+import Footer from './components/Footer';
+
 function App() {
   return (
-    <ThemeProvider>
+   
     <ProjectsProvider>
       <MatrixLoader/>
       <BrowserRouter basename="/portfolio_shanna.io/">
@@ -27,18 +27,16 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about-me" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
+            <Route path="/projects" element={<ProjectSection />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
+<Footer/>
       </BrowserRouter>
     </ProjectsProvider>
 
-</ThemeProvider>
   );
 }
 
 export default App;
-      // <h1 className="text-3xl font-bold underline text-pink-500">Hello world!</h1>
-      //  <h1 className="text-3xl font-bold underline text-pink"> 
-   
+     

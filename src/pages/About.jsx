@@ -1,76 +1,125 @@
-import React from 'react';
-import shanna from '../assets/images/shanna1.jpg';
+
+import React from "react";
+import {
+  FaDownload,
+  FaGithub,
+  FaLinkedin,
+  FaEnvelope,
+  FaGlobe,
+} from "react-icons/fa";
+import shanna from "../assets/images/shanna1.jpg";
 
 const About = () => {
   return (
     <>
-      {/* About Me Section */}
-      {/* <section className="min-h-screen p-10 bg-mint text-gray-700">
-        <h2 className="text-3xl font-bold text-center mb-8">About Me</h2>
-        <div className="flex flex-wrap items-center justify-center gap-10">
-       
-          <div className="max-w-lg text-white bg-gray-800 p-6 rounded-lg shadow-lg">
-            <h3 className="text-xl font-semibold mb-2">Bio</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam ea tempore dolor maiores adipisci, 
-              a debitis aspernatur quasi maxime repellat est eos laboriosam!
+   
+
+        
+      <section className="min-h-screen bg-gradient-to-br from-pink-900 via-sky-500 to-teal-900 px-4 py-8 flex flex-col items-center justify-center text-white">
+
+        <div className="max-w-5xl w-full flex flex-col items-center gap-6 text-center">
+
+          <div className="flex flex-col items-center">
+            <div className="w-36 h-36 rounded-full overflow-hidden border-4 border-white shadow-md">
+              <img
+                src={shanna}
+                alt="Shanna"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <h2 className="mt-2 text-xl font-bold text-cyan-100"  style={{ fontFamily: "Allura, cursive", fontSize: "40px" }}>Shanna Noe</h2>
+            <p className="text-sm">Full-Stack Developer</p>
+            <p className="text-sm text-cyan-200">Open to Opportunities</p>
+
+            {/* Icons */}
+            <div className="flex gap-4 mt-2 text-xl justify-center">
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub />
+              </a>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin />
+              </a>
+              <a href="mailto:snoe.prsvr@gmail.com">
+                <FaEnvelope />
+              </a>
+            </div>
+          </div>
+
+          {/* About Me */}
+          <h1
+            className="text-l font-bold mb-2"
+            style={{ fontFamily: "inspiration, cursive", fontSize: "40px" }}
+          >
+            About Me
+          </h1>
+          <div className="text-sm leading-relaxed max-w-3xl">
+            <p className="mb-3" style={{fontFamily: 'xanh-mono, cursive' }}>
+              I am a certified Full-Stack MERN Developer through the Persevere
+              Tech Alliance Program, currently expanding my expertise in ML/AI
+              using Python at Columbia University's Justice Through Code
+              program. As a <strong> Software Engineer Intern at Banyan Labs</strong>, I
+              contribute to both front-end and back-end development, honing my
+              skills in building scalable, responsive web applications. My
+              proficiency in the MERN stack allows me to create efficient
+              solutions that address real-world challenges.
             </p>
+            <a
+              href="/shannaUpdatedResume11.pdf"
+              download
+              className="inline-flex items-center gap-2 bg-gray-700 hover:bg-gray-600 py-2 px-4 rounded text-white"
+            ></a>
           </div>
 
-         
-          <div>
-            <img src={shanna} alt="Shanna" className="w-64 h-64 rounded-lg shadow-lg object-cover" />
-          </div>
-        </div>
-      </section> */}
-<section className="min-h-[80vh] pt-24 p-10 bg-mint text-gray-700 flex items-center justify-center">
-  <div className="flex flex-wrap items-center justify-center gap-10">
-    {/* About Me Text */}
-    <div className="max-w-lg text-white bg-gray-800 p-6 rounded-lg shadow-lg">
-      <h3 className="text-xl font-semibold mb-2">Bio</h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam ea tempore dolor maiores adipisci, 
-        a debitis aspernatur quasi maxime repellat est eos laboriosam!
-      </p>
-    </div>
+        
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 w-full text-sm text-left">
+        
+            <div>
+              <h4 className="text-lg font-semibold text-cyan-300 mb-2">
+                Experience
+              </h4>
+              <ul className="space-y-1">
+                <li>
+                  <strong>Intern | Banyan Labs LLC</strong> (May 2025 – Present)
+                  <ul className="list-disc ml-5">
+                    <li>
+                      Contributing to front-end and back-end feature
+                      development.
+                    </li>
+                    <li>Using GitHub for project/task management.</li>
+                    <li>Writing project documentation for consistency.</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
 
-    {/* Profile Image */}
-    <div>
-         <div className="bg-mint text-lavender">
-       Custom Colors Example
-     </div>
-      <img src={shanna} alt="Shanna" className="w-64 h-64 rounded-lg shadow-lg object-cover" />
-    </div>
-  </div>
-</section>
-      {/* Education, Experience, and Skills Section */}
-      <section className="p-10 bg-gray-900 text-white">
-        <div className="flex flex-wrap justify-around gap-10">
-          {/* Education */}
-          <div className="max-w-md bg-gray-700 p-6 rounded-lg shadow-lg">
-            <h3 className="text-xl font-semibold mb-2">Education</h3>
-            <p>Persevere Tech Alliance from 2023-2025</p>
-            <p></p>
-            <p>Columbia University</p>
-          </div>
-
-          {/* Experience */}
-          <div className="max-w-md bg-gray-700 p-6 rounded-lg shadow-lg">
-            <h3 className="text-xl font-semibold mb-2">Experience</h3>
-            <p>Banyan Labs current</p>
-          </div>
-
-          {/* Skills */}
-          <div className="max-w-md bg-gray-700 p-6 rounded-lg shadow-lg">
-            <h3 className="text-xl font-semibold mb-2">Skills</h3>
-            <ul className="list-disc list-inside">
-              <li>React</li>
-              <li>JavaScript</li>
-              <li>HTML & CSS</li>
-              <li>GitHub</li>
-              <li>TailwindCSS</li>
-              <li>TypeScript</li>
-            </ul>
+            {/* Education */}
+            <div>
+              <h4 className="text-lg font-semibold text-cyan-300 mb-2">
+                Education
+              </h4>
+              <ul className="space-y-1">
+                <li>
+                  <strong>Columbia University</strong> – Justice Through Code
+                  (2025–Present)
+                </li>
+                <li>
+                  <strong>Persevere Tech Alliance</strong> – Full-Stack
+                  Development (2023–2025)
+                </li>
+                <li>
+                  <strong>Pivot Technology School</strong> – Cybersecurity
+                  Certificate (2023–2024)
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -79,48 +128,3 @@ const About = () => {
 };
 
 export default About;
-
-
-// import React from 'react';
-// import shanna from '../assets/images/shanna1.jpg'
-// const About = () => {
-//   return (
-//     <>
-//     <section className="min-h-screen p-10 bg-mint text-gray-700">
-     
-
-//       <div className="mb-6">
-// <span>
-//         <h3 className="text-xl font-semibold mb-2">Bio</h3>
-//         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam ea tempore dolor maiores adipisci, a debitis aspernatur quasi maxime repellat est eos laboriosam! Dolor quae obcaecati, quos quibusdam accusamus sapiente, asperiores voluptas voluptatum voluptatem eos illum veritatis, atque suscipit. Magni totam, rerum iure accusantium earum odio quae reiciendis voluptates voluptatem quos esse magnam aliquam eligendi?</p>
-//       <img src={shanna} alt="About Pic" className="mx-auto mb-6" />
-//       <h2 className="text-3xl font-bold text-center mb-8">About Me</h2>
-// </span>
-//       </div>
-//     </section>
-// <section>
-
-
-//       <div className="mb-6">
-//         <h3 className="text-xl font-semibold mb-2">Skills</h3>
-//         <ul className="list-disc list-inside">
-//           <li>React</li>
-//           <li>JavaScript</li>
-//           <li>HTML & CSS</li>
-//           <li>GitHub</li>
-//         </ul>
-//       </div>
-// </section>
-// <section>
-
-//       <div  className="text-xl  mb-2 text-white">
-//         <h3 className="text-xl font-semibold mb-2 text-white">Education</h3>
-//         <p>Columbia University - Spring 2025 Cohort</p>
-    
-//       </div>
-// </section>
-//     </>
-//   );
-// };
-
-// export default About;

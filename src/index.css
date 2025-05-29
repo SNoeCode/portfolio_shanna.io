@@ -10,11 +10,13 @@
 html {
   transition: background-color 0.3s, color 0.3s;
 }
+
 .oregano-regular {
   font-family: "Oregano", cursive;
   font-weight: 400;
   font-style: normal;
 }
+
 .comforter-regular {
   font-family: "Comforter", cursive;
   font-weight: 400;
@@ -26,16 +28,19 @@ html {
   font-weight: 400;
   font-style: normal;
 }
+
 .cormorant-sc-regular {
   font-family: "Cormorant SC", serif;
   font-weight: 400;
   font-style: normal;
 }
+
 .girassol-regular {
   font-family: "Girassol", serif;
   font-weight: 400;
   font-style: normal;
 }
+
 .font-comforter {
   @apply text-6xl;
   font-family: "Comforter", cursive !important;
@@ -55,31 +60,70 @@ html {
   @apply text-3xl;
   font-family: "Fjalla One", sans-serif;
 }
+
 .font-girassol {
   @apply text-2xl;
 
   font-family: "Girassol", serif;
- }
+}
+
 .font-oregano {
-   @apply text-4xl;
+  @apply text-4xl;
   font-family: "Oregano", cursive;
-} 
+}
+
 .oregano-regular {
   font-family: "Oregano", cursive;
   font-weight: 400;
   font-style: italic;
 }
 
+.inspiration-regular {
+  font-family: "Inspiration", cursive;
+  font-weight: 800;
+  font-style: normal;
+}
 
+.font-inspiration {
+  @apply text-8xl;
+  
+  font-family: "Inspiration";
+
+}
+.allura-regular {
+  font-family: "Allura", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.font-allura {
+    @apply text-8xl;
+    font-family:'Allura';
+}
 .font-cormorant {
-   @apply text-2xl;
+  @apply text-2xl;
   font-family: "Cormorant SC", serif;
 
 }
+
 .skill-item {
-  min-height: 60px; /* Ensures consistent size */
+  min-height: 60px;
+  /* Ensures consistent size */
+}
+.xanh-mono-regular {
+  font-family: "Xanh Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
 }
 
+.xanh-mono-regular-italic {
+  font-family: "Xanh Mono", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+.font-xanh-mono{
+  @apply text-4xl;
+   font-family: "Xanh Mono"
+}
 
 /* .spiral-gradient {
   background-image: conic-gradient(from 0deg, rgb(28, 149, 149), rgb(239, 17, 20), rgb(4, 95, 95), rgb(255, 38, 0));
@@ -157,25 +201,28 @@ html {
     position: relative; 
   }
 } */
- @keyframes spiral-in {
+@keyframes spiral-in {
   0% {
     transform: scale(0) rotate(0deg) translateX(0) translateY(0);
     opacity: 0;
-    filter: blur(10px); 
+    filter: blur(10px);
   }
+
   50% {
     transform: scale(1.2) rotate(180deg) translateX(30px) translateY(-30px);
     opacity: .5;
     filter: blur(5px);
   }
+
   100% {
     transform: scale(1) rotate(360deg) translateX(0) translateY(0);
     opacity: 1;
-    filter: blur(0px); 
-    position: relative; 
+    filter: blur(0px);
+    position: relative;
+  }
+
 }
 
- }
 /* .skill-item {
   animation: spiral-in 1.5s ease-out forwards;
   position: absolute;
@@ -184,7 +231,7 @@ html {
   transform: translate(-50%, -50%);
   overflow: hidden; 
 } */
- .skill-item {
+.skill-item {
   opacity: 0;
   transform: scale(0);
   position: absolute;
@@ -193,8 +240,9 @@ html {
   transform: translate(-50%, -50%);
   animation: spiral-in 1.5s ease-out forwards;
   overflow: hidden;
-  
+
 }
+
 /* @keyframes spiral-in {
   0% {
     transform: scale(0) rotate(0deg) translateX(0) translateY(0);

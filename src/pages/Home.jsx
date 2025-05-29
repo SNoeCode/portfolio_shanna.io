@@ -1,14 +1,9 @@
 
-
 import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import Skills from "../components/Skills";
-import Projects from "../components/Projects";
-const sections = [
-  { id: "about", bg: "bg-pink-900", title: "About Me", content: "Here’s a quick look at my journey..." },
-  { id: "projects", bg: "bg-red-500", title: "Projects", content: "Here are my latest projects..." },
-  { id: "contact", bg: "bg-mint", title: "Contact Me", content: "Get in touch with me here..." },
-];
+import Projects from "../pages/Projects";
+import ProjectSection from "../components/ProjectSection";
 
 
 const Home = () => {
@@ -35,7 +30,9 @@ const Home = () => {
     <>
       <Header />
        <Skills/>
-    <Projects/>
+      
+       <Projects/>
+
   
 
    
