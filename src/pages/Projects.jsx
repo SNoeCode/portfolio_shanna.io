@@ -1,55 +1,107 @@
-
-import React from "react";
+// src/components/Projects.jsx
+import React, { useState } from "react";
 import { useProjects } from "../context/ProjectsContext";
-
+import ComingSoonModal from "../components/ComingSoonModal";
 const Projects = () => {
   const { projects } = useProjects();
+const [showModal, setShowModal] = useState(false);
 
-  return (
-    <>
-      <section
-        id="projects"
-        className="min-h-screen p-20 bg-gray-900 text-white flex flex-col items-center justify-center"
-      >
-        <h2 className="text-8xl font-extrabold text-teal-400 mb-16">Projects</h2>
-        <div className="max-w-6xl mx-auto text-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 place-items-center">
-            {projects.map((project, index) => (
-              <div
-                key={index}
-                className="bg-gray-800 p-6 rounded-lg shadow-lg w-80"
+  const handleLiveClick = (livePreview) => {
+    if (livePreview) {
+      window.open(livePreview, "_blank");
+    } else {
+      setShowModal(true);
+    }
+  };
+  // return (
+  //   <section
+  //     id="projects"
+  //     className="min-h-screen p-20 bg-gray-900 text-white flex flex-col items-center justify-center"
+  //   >
+  //     <h2 className="text-5xl font-extrabold text-teal-400 mb-16">Projects</h2>
+  //     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 place-items-center">
+  //       {projects.map((project, index) => (
+  //         <div
+  //           key={index}
+  //           className="bg-gray-800 p-6 rounded-lg shadow-lg w-80"
+  //         >
+  //           <img
+  //             src={project.image}
+  //             alt={project.name}
+  //             className="w-full h-40 object-cover rounded-md mb-6"
+  //           />
+  //           <h3 className="text-2xl font-semibold mb-4">{project.name}</h3>
+  //           <p className="text-gray-400 mb-6">{project.description}</p>
+  //           <div className="flex justify-between">
+  //             {project.livePreview ? (
+  //               <a
+  //                 href={project.livePreview}
+  //                 target="_blank"
+  //                 rel="noopener noreferrer"
+  //                 className="bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600"
+  //               >
+  //                 Live Preview
+  //               </a>
+  //             ) : (
+  //               <span className="text-sm italic text-gray-500 self-center">
+  //                 Not Deployed
+  //               </span>
+  //             )}
+  //             <a
+  //               href={project.sourceCode}
+  //               target="_blank"
+  //               rel="noopener noreferrer"
+  //               className="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600"
+  //             >
+  //               GITHUB Link
+  //             </a>
+  //           </div>
+  //         </div>
+  //       ))}
+  //     </div>
+  //   </section>
+    return (
+    <section
+      id="projects"
+      className="min-h-screen p-20 bg-gray-900 text-white flex flex-col items-center justify-center"
+    >
+      <h2 className="text-5xl font-extrabold text-teal-400 mb-16">Projects</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 place-items-center">
+        {projects.map((project, index) => (
+          <div
+            key={index}
+            className="bg-gray-800 p-6 rounded-lg shadow-lg w-80"
+          >
+            <img
+              src={project.image}
+              alt={project.name}
+              className="w-full h-40 object-cover rounded-md mb-6"
+            />
+            <h3 className="text-2xl font-semibold mb-4">{project.name}</h3>
+            <p className="text-gray-400 mb-6">{project.description}</p>
+            <div className="flex justify-between">
+              <button
+                onClick={() => handleLiveClick(project.livePreview)}
+                className="bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600"
               >
-                <img
-                  src={project.image || "/images/projectimg1.png"}
-                  alt={project.name}
-                  className="w-full h-40 object-cover rounded-md mb-6"
-                />
-                <h3 className="text-2xl font-semibold mb-4">{project.name}</h3>
-                <p className="text-gray-400 mb-6">{project.description}</p>
-                <div className="flex justify-between">
-                  <a
-                    href={project.livePreview}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-pink-500 text-white px-6 py-2 rounded hover:bg-pink-900"
-                  >
-                    Live Preview
-                  </a>
-                  <a
-                    href={project.sourceCode}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600"
-                  >
-                    GITHUB Link
-                  </a>
-                </div>
-              </div>
-            ))}
+                Live Preview
+              </button>
+              <a
+                href={project.sourceCode}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600"
+              >
+                GITHUB Link
+              </a>
+            </div>
           </div>
-        </div>
-      </section>
-    </>
+        ))}
+      </div>
+
+   
+      <ComingSoonModal show={showModal} onClose={() => setShowModal(false)} />
+    </section>
   );
 };
 

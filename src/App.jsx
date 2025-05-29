@@ -11,7 +11,6 @@ import Contact from './pages/Contact';
 import Navbar from './components/Navbar';
 import { ProjectsProvider } from './context/ProjectsContext';
 import MatrixLoader from './components/MatrixLoader';
-import ProjectSection from './components/ProjectSection';
 import Footer from './components/Footer';
 
 function App() {
@@ -22,12 +21,11 @@ function App() {
       <BrowserRouter basename="/portfolio_shanna.io/">
         <Navbar/>
         <div className="min-h-screen bg-slate text-light transition-colors duration-300">
-          {/* <Top/> */}
-          {/* <Header/> */}
+      
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about-me" element={<About />} />
-            <Route path="/projects" element={<ProjectSection />} />
+            <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>

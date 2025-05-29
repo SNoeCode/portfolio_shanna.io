@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import Skills from "../components/Skills";
 import Projects from "../pages/Projects";
-import ProjectSection from "../components/ProjectSection";
 
 
 const Home = () => {

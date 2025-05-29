@@ -14,37 +14,38 @@ const about = {
   },
   
 }
+import project1 from '../assets/project1.png';
 
-const projects = [
+import project2 from '../assets/project2.png';
+import project3 from '../assets/project3.png';
+// src/data/portifolio.js
+export const projects = [
   {
-    name: 'Shannas Store',
-    description: 'Built dynamic store using MERN Stack,  with functioning shopping cart, using CRUD, and authunications and authorization, and products list using a restful API.',
-    stack: ['Mongo', 'React', 'Express','Node'],
-    sourceCode: "https://github.com/SNoeCode/shannaStore",
-    // livePreview: 'https://your-live-preview.com', 
-     image: "./images/project2.png"
-   
+    name: "Shannas Store",
+    description: "Built dynamic store using MERN Stack, with functioning shopping cart, using CRUD, and authentications and authorization, and products list using a restful API.",
+    techStack: ["MongoDB", "Express.js", "React", "Node.js"],
+    image: project2,
+    livePreview: "", 
+    sourceCode: "https://github.com/SNoeCode/ShannaStore"
   },
-{
+  {
     name: "Horoscope App",
     description: "An interactive astrology app built with Vite and deployed on Vercel.",
-    stack: ["React", "Vite", "CSS", "Python"],
-    sourceCode: "https://github.com/SNoeCode/horoscope-app", 
-    livePreview: "https://horoscope-63bbm0hd4-snoecodes-projects.vercel.app/",
-     image: "./images/projectimg1.png" 
-
+    techStack: ["React", "Vite", "Tailwind"],
+    image: project1,
+    livePreview: 'https://horoscope-d6jk8kvu9-snoecodes-projects.vercel.app/',
+    sourceCode: 'https://github.com/SNoeCode/horoscope-app.git'
   },
-
-{
+  {
     name: "Todo App",
-    description: "An interactive astrology app built with Vite and deployed on Vercel.",
-    stack: ["React", "Express", "Mongo", "Node"],
-    sourceCode: "https://github.com/SNoeCode/todo-app", 
-    // livePreview: "https://horoscope-63bbm0hd4-snoecodes-projects.vercel.app/",
-     image: "./images/project3.png" 
+    description: "An interactive todo app built with Vite and deployed on Vercel.",
+    techStack: ["React", "Tailwind"],
+    image: project3,
+    livePreview: "", // Not deployed yet
+    sourceCode: "https://github.com/SNoeCode/todo-app"
+  }
+];
 
-  },
-]
 
 const skills = [
   'HTML',
@@ -65,4 +66,4 @@ const contact = {
   email: 'snoe.prsvr@gmail.com', // Replace with your actual email
 }
 
-export { header, about, projects, skills, contact }
+export { header, about, skills, contact }
