@@ -68,7 +68,7 @@ const About = () => {
               program. As a <strong> Software Engineer Intern at Banyan Labs</strong>, I
               contribute to both front-end and back-end development, honing my
               skills in building scalable, responsive web applications. My
-              proficiency in the MERN stack allows me to create efficient
+              proficiency in the MERN stack and Python allows me to create efficient
               solutions that address real-world challenges.
             </p>
             <a

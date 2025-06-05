@@ -13,7 +13,8 @@ const Header = () => {
 
     
    <div className="absolute z-10 flex flex-col justify-center left-20 max-w-3xl">
-  <h1 style={{ fontFamily: "Comforter, cursive", fontSize: "120px" }} className="text-pink-700 text-9xl font-bold leading-none">{name}</h1>
+ <h1 style={{ fontFamily: "Comforter, cursive", fontSize: "120px" }} className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold leading-none text-pink-700">{name}</h1>
+  {/* <h1  className="text-pink-700 text-9xl font-bold leading-none">{name}</h1> */}
   <h2 className="text-2xl font-bold transition-transform duration-300 hover:scale-105 hover:text-pink-400">{role}</h2>
   <p className="mt-9 text-4xl font-oregano text-pink-100">{description}</p> {/* Moves description under the name */}
 </div>

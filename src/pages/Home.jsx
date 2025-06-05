@@ -27,10 +27,15 @@ const Home = () => {
 
   return (
     <>
+    {/* <div className="pt-[80px]">  */}
+ <div className="flex flex-col min-h-screen">
+  
       <Header />
        <Skills/>
       
        <Projects/>
+ </div>
+{/* </div> */}
 
   
 
