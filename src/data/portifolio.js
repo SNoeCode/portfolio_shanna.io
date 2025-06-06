@@ -43,14 +43,14 @@ export const projects = [
   
     sourceCode: "https://github.com/SNoeCode/todo-app"
   },
-  //   {
-  //   name: "Todo App",
-  //   description: "An interactive todo app built with Vite and MERN stack.",
-  //   techStack: ["React.js", "MongoDB", "CSS", "Express.js", "Node.js"],
-  //   image: project3,
-  
-  //   sourceCode: "https://github.com/SNoeCode/todo-app"
-  // }
+    {
+    name: "Emoji Mood Tracker App",
+    description: "An emoji mood tracker app, that uses Next.js, Typscript, and Tailwind",
+    techStack: ["Next.js", "TailwindCSS", "TypeScript"],
+    image: project4,
+  livePreview: "https://tracker-mood-artfgmhw9-snoecodes-projects.vercel.app",
+    sourceCode: "https://github.com/SNoeCode/emoji-mood.git"
+  }
 ];
 
 
