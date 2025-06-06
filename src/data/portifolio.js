@@ -32,7 +32,7 @@ export const projects = [
     description: "An interactive astrology app built with Vite and deployed on Vercel.",
     techStack: ["React", "Vite", "CSS"],
     image: project1,
-    livePreview: 'https://683fbe9d250bcec7fb2da315--shoroscope-app.netlify.app/',
+    livePreview: 'https://shoroscope-app.netlify.app/',
     sourceCode: 'https://github.com/SNoeCode/horoscope-app.git'
   },
   {
