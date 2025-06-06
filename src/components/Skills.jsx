@@ -133,12 +133,12 @@ const Skills = () => {
   return (
     <div
       ref={ref}
-      className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-teal-300 to-orange-800 p-8 relative overflow-hidden"
+      className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-teal-300 to-pink-800 p-8 relative overflow-hidden"
     >
       {/* Heading */}
       <h1
         style={{ fontFamily: "Oregano, cursive", fontSize: "46px" }}
-        className="text-4xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-b from-teal-600 to-orange-500"
+        className="text-4xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-b from-teal-900 to-pink-900"
       >
         My Techinical Skills
       </h1>

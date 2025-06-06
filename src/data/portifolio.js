@@ -42,7 +42,15 @@ export const projects = [
     image: project3,
   
     sourceCode: "https://github.com/SNoeCode/todo-app"
-  }
+  },
+  //   {
+  //   name: "Todo App",
+  //   description: "An interactive todo app built with Vite and MERN stack.",
+  //   techStack: ["React.js", "MongoDB", "CSS", "Express.js", "Node.js"],
+  //   image: project3,
+  
+  //   sourceCode: "https://github.com/SNoeCode/todo-app"
+  // }
 ];
 
 

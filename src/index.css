@@ -125,82 +125,6 @@ html {
    font-family: "Xanh Mono"
 }
 
-/* .spiral-gradient {
-  background-image: conic-gradient(from 0deg, rgb(28, 149, 149), rgb(239, 17, 20), rgb(4, 95, 95), rgb(255, 38, 0));
-}
-@keyframes spiral-in {
-  0% {
-    transform: scale(0) rotate(0deg);
-    opacity: 0;
-  }
-  50% {
-    transform: scale(1.2) rotate(180deg);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1) rotate(360deg) translateY(0) translateX(0);
-    position: relative;
-  }
-}
-
-.skill-item {
-  animation: spiral-in 1.5s ease-out forwards;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-} 
-
- */
-
-
-
-/* .spiral-gradient {
-   @apply
-  background: conic-gradient(from 0deg, teal,  rgb(239, 17, 20),teal, rgb(255, 38, 0));
-}
- */
-/* .spiral-gradient {
-  background-image: conic-gradient(from 0deg, rgb(28, 149, 149), rgb(239, 17, 20), rgb(4, 95, 95), rgb(255, 38, 0));
-}
-
-@keyframes spiral-in {
-  0% {
-    transform: scale(0) rotate(0deg);
-    opacity: 0;
-  }
-  50% {
-    transform: scale(1.2) rotate(180deg);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1) rotate(360deg) translateY(0) translateX(0);
-    position: relative; 
-  }
-} */
-
-/* .skill-item {
-  animation: spiral-in 1.5s ease-out forwards;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
- @keyframes spiral-in {
-  0% {
-    transform: scale(0) rotate(0deg) translateX(0) translateY(0);
-    opacity: 0;
-  }
-  50% {
-    transform: scale(1.2) rotate(180deg) translateX(30px) translateY(-30px);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1) rotate(360deg) translateX(0) translateY(0);
-    opacity: 1;
-    position: relative; 
-  }
-} */
 @keyframes spiral-in {
   0% {
     transform: scale(0) rotate(0deg) translateX(0) translateY(0);
@@ -223,14 +147,7 @@ html {
 
 }
 
-/* .skill-item {
-  animation: spiral-in 1.5s ease-out forwards;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  overflow: hidden; 
-} */
+
 .skill-item {
   opacity: 0;
   transform: scale(0);
@@ -243,35 +160,3 @@ html {
 
 }
 
-/* @keyframes spiral-in {
-  0% {
-    transform: scale(0) rotate(0deg) translateX(0) translateY(0);
-    opacity: 0;
-    filter: blur(15px);
-    z-index: -1;
-  }
-
-  50% {
-    transform: scale(1.2) rotate(180deg) translateX(50px) translateY(-50px);
-    opacity: 0.8;
-    filter: blur(5px);
-    z-index: 10;
-  }
-
-  100% {
-    transform: scale(1) rotate(360deg) translateX(0) translateY(0);
-    opacity: 1;
-    filter: blur(0px);
-    z-index: 100;
-    position: relative;
-  }
-}
-
-.skill-item {
-  animation: spiral-in 2s ease-out forwards;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background: transparent;
-} */
