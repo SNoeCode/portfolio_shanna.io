@@ -1,8 +1,6 @@
 import React, { useContext, useState } from "react";
 import Logo from "../assets/images/Dev.png";
 import {
-  FaMoon,
-  FaSun,
   FaHome,
   FaFolderOpen,
   FaUser,
@@ -32,7 +30,7 @@ const Navbar = () => {
 
       <nav className="fixed top-0 left-0 w-full h-[80px] flex items-center justify-between px-4 sm:px-6 lg:px-10 text-cyan-100 bg-gradient-to-r from-sky-500 to-teal-400 border-b border-gray-700 z-50 shadow-xl">
         
-        {/* Left side - Logo and Resume */}
+      
         <div className="flex items-center gap-4 sm:gap-6">
           <img
             src={Logo}
@@ -50,7 +48,7 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* Desktop Navigation - Hidden on mobile */}
+       
         <ul className="font-cormorant hidden md:flex items-center gap-6 lg:gap-10 text-pink-700">
           <li
             onMouseEnter={() => setHovered("home")}
@@ -105,7 +103,7 @@ const Navbar = () => {
           </li>
         </ul>
 
-        {/* Mobile Hamburger Menu Button - Visible only on mobile */}
+      
         <button
           onClick={toggleMenu}
           className="md:hidden text-cyan-100 text-2xl focus:outline-none hover:text-pink-300 transition duration-300"
@@ -114,12 +112,12 @@ const Navbar = () => {
           {isMenuOpen ? <FaTimes /> : <FaBars />}
         </button>
 
-        {/* Mobile Menu Overlay */}
+      
         {isMenuOpen && (
           <div className="md:hidden fixed inset-0 bg-black bg-opacity-50 z-40" onClick={closeMenu}></div>
         )}
 
-        {/* Mobile Menu Slide-out */}
+      
         <div className={`md:hidden fixed top-[80px] right-0 h-auto w-64 bg-gradient-to-b from-sky-500 to-teal-400 transform transition-transform duration-300 ease-in-out z-50 ${
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}>
@@ -175,92 +173,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-// import React, { useState } from "react";
-// import { Link } from "react-router-dom";
-// import Logo from "../assets/images/Dev.png";
-// import { FaHome, FaFolderOpen, FaUser, FaEnvelope, FaBars, FaTimes } from "react-icons/fa";
-// import { about } from "../data/portifolio";
-
-// const Navbar = () => {
-//   const [menuOpen, setMenuOpen] = useState(false);
-
-//   const navLinks = [
-//     { to: "/", icon: <FaHome />, label: "Home" },
-//     { to: "/projects", icon: <FaFolderOpen />, label: "Projects" },
-//     { to: "/about-me", icon: <FaUser />, label: "About Me" },
-//     { to: "/contact", icon: <FaEnvelope />, label: "Contact" },
-//   ];
-
-//   return (
-    // <>
-    //   <div className="h-[80px]"></div>
-
-    //   <nav className="fixed top-0 left-0 w-full h-[80px] flex items-center justify-between px-6 bg-gradient-to-r from-sky-500 to-teal-400 text-white z-50 shadow-lg">
-    //     {/* Logo + Resume */}
-    //     <div className="flex items-center gap-4">
-    //       <img
-    //         src={Logo}
-    //         alt="Logo"
-    //         className="h-[50px] w-[50px] rounded-lg shadow-md object-contain"
-    //       />
-    //       <a
-    //         href={about?.resume || "#"}
-    //         target="_blank"
-    //         rel="noopener noreferrer"
-    //         className="hidden sm:inline-block font-bold text-indigo-900 bg-pink-900 px-4 py-2 rounded shadow"
-    //       >
-    //         My Resume
-    //       </a>
-    //     </div>
-
-    //     {/* Desktop Nav */}
-    //     <ul className="hidden md:flex items-center gap-8 text-lg">
-    //       {navLinks.map(({ to, icon, label }) => (
-    //         <li key={label}>
-    //           <Link to={to} className="flex items-center gap-2 hover:text-yellow-300 transition-colors">
-    //             {icon}
-    //             <span>{label}</span>
-    //           </Link>
-    //         </li>
-    //       ))}
-    //     </ul>
-
-    //     {/* Hamburger */}
-    //     <div className="md:hidden">
-    //       <button onClick={() => setMenuOpen(!menuOpen)}>
-    //         {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-    //       </button>
-    //     </div>
-    //   </nav>
-
-    //   {/* Mobile Menu */}
-    //   {menuOpen && (
-    //     <div className="md:hidden fixed top-[80px] left-0 w-full bg-gradient-to-b from-sky-500 to-teal-400 text-white py-6 z-40">
-    //       <ul className="flex flex-col items-center gap-6 text-lg">
-    //         {navLinks.map(({ to, label }) => (
-    //           <li key={label}>
-    //             <Link to={to} onClick={() => setMenuOpen(false)} className="hover:text-yellow-300">
-    //               {label}
-    //             </Link>
-    //           </li>
-    //         ))}
-    //         <li>
-    //           <a
-    //             href={about?.resume || "#"}
-    //             target="_blank"
-    //             rel="noopener noreferrer"
-    //         className="font-girassol flex shrink text-lg text-indigo-900 border-2 px-4 py-2"
-               
-    //             // className="text-indigo-900 bg-white px-4 py-2 rounded shadow"
-    //           >
-    //             My Resume
-    //           </a>
-    //         </li>
-    //       </ul>
-    //     </div>
-    //   )}
-    // </>
-//   );
-// };
-
-// export default Navbar;

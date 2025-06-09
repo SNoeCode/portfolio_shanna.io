@@ -29,7 +29,7 @@ const ContactForm = () => {
           Send Message
         <button
           type="submit"
-          className="text-black w-full bg-lavender text-black p-3 rounded hover:bg-blush transition"
+          className="text-black w-full bg-lavender p-3 rounded hover:bg-blush transition"
           >
         </button>
       </form>

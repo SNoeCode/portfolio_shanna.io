@@ -22,7 +22,6 @@
         "Accessibility Standards",
         "Data Structures & Algorithms",
         "Cybersecurity Fundamentals",
-        "Authentication(JWT & OAuth)",
-        "Linux & Bash Scripting"
-       ]
+        "Authentication(JWT & OAuth)"
+             ]
 }
