@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-// import MatrixGif from "../assets/matrix.gif";
+
 
 const MatrixLoader = () => {
   const [showLoader, setShowLoader] = useState(false);

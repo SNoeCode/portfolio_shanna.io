@@ -35,7 +35,7 @@ const Skills = () => {
  
       <h1
         style={{ fontFamily: "Oregano, cursive", fontSize: "46px" }}
-        className="text-4xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-b from-teal-900 to-pink-900"
+        className="text-4xl font-bold mb-1 ml-25 text-center text-transparent bg-clip-text bg-gradient-to-b from-teal-900 to-pink-900"
       >
         My Techinical Skills
       </h1>

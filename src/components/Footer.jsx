@@ -20,7 +20,7 @@ const Footer = () => {
             <AiFillGithub size={24} />
           </a>
           <a
-            href="https://www.linkedin.com/in/shannanoe/"
+            href="https://www.linkedin.com/in/shanna-noe/"
             className="text-white hover:text-gray-400 transition"
             target="_blank"
             rel="noopener noreferrer"
