@@ -45,12 +45,12 @@ export const projects = [
     sourceCode: "https://github.com/SNoeCode/todo-app"
   },
     {
-    name: "Emoji Mood Tracker App",
-    description: "An emoji mood tracker app, that uses Next.js, Typscript, and Tailwind",
+    name: "Shoe Store Landing Page",
+    description: "A responsive landing page for a shoe store, built with Next.js, TypeScript, and TailwindCSS.",
     techStack: ["Next.js", "TailwindCSS", "TypeScript"],
     image: project4,
-  livePreview: "https://ojt-project-eight.vercel.app/",
-    sourceCode: "https://github.com/SNoeCode/emoji-mood.git"
+    livePreview: "https://ojt-project-eight.vercel.app/",
+    sourceCode: "https://github.com/seatherly-banyanlabs/team2-project.git"
   }
 ];
 
