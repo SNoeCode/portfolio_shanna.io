@@ -17,6 +17,7 @@ const about = {
 import project1 from '../assets/project1.png';
 import project2 from '../assets/project2.png';
 import project3 from '../assets/project3.png';
+import project4 from '../assets/project4.png';
 
 export const projects = [
   {
@@ -48,7 +49,7 @@ export const projects = [
     description: "An emoji mood tracker app, that uses Next.js, Typscript, and Tailwind",
     techStack: ["Next.js", "TailwindCSS", "TypeScript"],
     image: project4,
-  livePreview: "https://tracker-mood-artfgmhw9-snoecodes-projects.vercel.app",
+  livePreview: "https://ojt-project-eight.vercel.app/",
     sourceCode: "https://github.com/SNoeCode/emoji-mood.git"
   }
 ];
